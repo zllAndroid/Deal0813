@@ -1,0 +1,259 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/home_back"
+    android:orientation="vertical"
+     >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/app_theme"
+        android:orientation="horizontal">
+
+        <include
+            layout="@layout/include_mainfragment_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:focusable="true"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            app:srcCompat="@drawable/home_notice" />
+
+        <com.xm6leefun.zlldeal.ui_custom.AlwaysMarqueeTextView
+            android:id="@+id/home_tv_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+
+            android:text="人民日报生活漫步：莫让千元打车费毁了专车莫让千元打车费毁了专车莫让千元打车费毁了专车"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        android:orientation="vertical">
+    <RelativeLayout
+        android:id="@+id/home_re_parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/home_bac"
+        android:orientation="vertical">
+
+
+
+
+
+        <LinearLayout
+            android:id="@+id/lin_purse"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+        <LinearLayout
+            android:id="@+id/home_lin_purse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/home_purse" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="@dimen/home_margin_top"
+                android:gravity="center_vertical"
+                android:maxEms="4"
+                android:singleLine="true"
+                android:text="我的钱包"
+
+                android:textColor="@color/white"
+                android:textSize="@dimen/home_textsize" />
+
+        </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/home_lin_fanyong"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lin_purse"
+            android:layout_marginLeft="10dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/home_fanyong" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:singleLine="true"
+                android:textSize="@dimen/home_textsize"
+                android:layout_marginTop="@dimen/home_margin_top"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="返佣" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/home_lin_shanghu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_below="@+id/lin_purse"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/home_shanghu" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:singleLine="true"
+                android:textSize="@dimen/home_textsize"
+                android:layout_marginTop="@dimen/home_margin_top"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="商户入驻" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/home_iv_shoukuan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/home_shoukuan" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:orientation="vertical"
+            android:id="@+id/lin_down">
+            <LinearLayout
+                android:id="@+id/home_lin_down"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical"
+              >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/home_down_feilv" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:singleLine="true"
+                android:textSize="@dimen/home_textsize"
+                android:layout_marginTop="@dimen/home_margin_top"
+                android:layout_gravity="center"
+                android:layout_marginBottom="20dp"
+                android:gravity="center"
+                android:text="下调费率" />
+        </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/lin_down"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:orientation="vertical"
+            android:id="@+id/home_lin_minefeilv">
+
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/home_minefeilv" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:singleLine="true"
+                android:textSize="@dimen/home_textsize"
+                android:layout_marginTop="@dimen/home_margin_top"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="我的费率" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/home_lin_up"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/lin_down"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/home_up" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:singleLine="true"
+                android:textSize="@dimen/home_textsize"
+                android:layout_marginTop="@dimen/home_margin_top"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="升级" />
+        </LinearLayout>
+    </RelativeLayout>
+    </RelativeLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,92 @@
+apply plugin: 'com.android.application'
+apply plugin: 'android-apt'
+apply plugin: 'realm-android'
+android {
+    compileSdkVersion 27
+    buildToolsVersion '27.0.2'
+    defaultConfig {
+        ndk {
+            abiFilters "armeabi", "armeabi-v7a", "x86", "mips"
+        }
+        vectorDrawables.useSupportLibrary = true
+        applicationId "com.xm6leefun.zlldeal"
+        minSdkVersion 16
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0.0"
+        multiDexEnabled true
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            zipAlignEnabled true
+            //移除无用的resource文件
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
+    }
+    productFlavors {
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+        exclude module: 'support-v4'
+        exclude group: 'com.android.support'
+    })
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.jakewharton:butterknife:8.4.0'
+    compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.22'
+    compile 'com.android.support:design:27.+'
+    compile 'com.android.support:appcompat-v7:27.+'
+    compile 'com.android.support:recyclerview-v7:27.+'
+    testCompile 'junit:junit:4.12'
+    apt 'com.jakewharton:butterknife-compiler:8.4.0'
+    compile files('libs/alibaba-json-1.1.0.jar')
+    compile files('libs/volley.jar')
+    compile files('libs/BASE64Decoder.jar')
+    compile files('libs/ksoap2-android-assembly-3.3.0-jar-with-dependencies.jar')
+    compile files('libs/MPChartLib.jar')
+    compile 'com.google.code.gson:gson:2.8.0'
+    //    Glide
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'jp.wasabeef:glide-transformations:2.0.1'
+    compile files('libs/zxing.jar')
+    //RuntimePermissions
+    compile 'com.github.hotchemi:permissionsdispatcher:2.3.1'
+    apt 'com.github.hotchemi:permissionsdispatcher-processor:2.3.1'
+    //最新版本
+    compile 'com.youth.banner:banner:1.4.9'
+    compile 'com.android.support:multidex:1.0.1'
+//    compile 'com.squareup.retrofit2:retrofit:2.1.0'
+//    compile 'com.squareup.retrofit2:converter-gson:2.1.0'
+//    compile 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
+//    compile 'io.reactivex:rxandroid:1.2.1'
+
+    compile files('libs/core-1.58.0.0-sources.jar')
+    compile files('libs/prov-1.58.0.0.jar')
+
+//retrofit
+    compile 'com.squareup.retrofit2:retrofit:2.1.0'
+    compile 'io.reactivex:rxjava:1.1.6'
+    compile 'io.reactivex:rxandroid:1.2.1'
+    compile 'com.squareup.retrofit2:converter-gson:2.1.0'
+    compile 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
+//    compile 'cn.pedant.sweetalert:library:1.3'
+
+
+    compile 'com.ogaclejapan.smarttablayout:library:1.6.1@aar'
+
+    //Optional: see how to use the utility.
+//    compile 'com.ogaclejapan.smarttablayout:utils-v4:1.6.1@aar'
+//
+//    //Optional: see how to use the utility.
+//    compile 'com.ogaclejapan.smarttablayout:utils-v13:1.6.1@aar'
+}

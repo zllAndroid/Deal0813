@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+   >
+    <include
+        layout="@layout/include_subactivity_top"
+         />
+
+    <com.xm6leefun.zlldeal.ui_custom.CusScrollView
+        android:id="@+id/weshop_myscroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dp5"
+                        android:minEms="6"
+                        android:textColor="@color/gray666"
+                        android:gravity="right|center_vertical"
+                        android:layout_gravity="center_vertical"
+                        android:text="订单号:" />
+                    <TextView
+                        android:id="@+id/his_details_tv_order_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/gray333"
+                        android:text="2018454556" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dp5"
+                        android:minEms="6"
+                        android:textColor="@color/gray666"
+                        android:gravity="right|center_vertical"
+                        android:layout_gravity="center_vertical"
+                        android:text="商品名:" />
+                    <TextView
+                        android:id="@+id/his_details_tv_order_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/gray333"
+                        android:text="飞利浦剃须刀s900" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dp5"
+                        android:minEms="6"
+                        android:textColor="@color/gray666"
+                        android:gravity="right|center_vertical"
+                        android:layout_gravity="center_vertical"
+                        android:text="商品数量:" />
+                    <TextView
+                        android:id="@+id/his_details_tv_order_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="@color/gray333"
+                        android:gravity="center_vertical"
+                        android:text="10" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dp5"
+                        android:minEms="6"
+                        android:textColor="@color/gray666"
+                        android:gravity="right|center_vertical"
+                        android:layout_gravity="center_vertical"
+                        android:text="收件人:" />
+                    <TextView
+                        android:id="@+id/his_details_tv_shou_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/gray333"
+                        android:text="啊三" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_margin="@dimen/dp5"
+                        android:gravity="right|center_vertical"
+                        android:minEms="6"
+                        android:textColor="@color/gray666"
+                        android:text="收件人手机号:" />
+                    <TextView
+                        android:id="@+id/his_details_tv_shou_phone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/gray333"
+                        android:text="18065283783" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dp5"
+                        android:minEms="6"
+                        android:gravity="right|center_vertical"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="@color/gray666"
+                        android:text="收件地址:" />
+                    <TextView
+                        android:id="@+id/his_details_tv_shou_addr"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="@color/gray333"
+                        android:gravity="center_vertical"
+                        android:text="厦门市思明区观音山" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/dp5"
+                android:layout_marginRight="@dimen/dp5"
+                android:descendantFocusability="blocksDescendants">
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/his_details_recyc"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fadingEdge="none"
+                    />
+            </RelativeLayout>
+        </LinearLayout>
+    </com.xm6leefun.zlldeal.ui_custom.CusScrollView>
+</LinearLayout>

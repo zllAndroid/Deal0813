@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_bac"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/login_view_top"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp25"
+        android:visibility="gone"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp10"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp20"
+        android:background="@color/transparent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="登录" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp10"
+        android:orientation="vertical">
+        <com.ogaclejapan.smarttablayout.SmartTabLayout
+            android:id="@+id/login_viewpagertab"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp50"
+            android:paddingLeft="@dimen/dp20"
+            android:background="@color/transparent"
+            android:paddingRight="@dimen/dp20"
+            android:clipToPadding="false"
+            app:stl_customTabTextLayoutId="@layout/custom_login_text"
+            app:stl_customTabTextViewId="@+id/custom_tv_text"
+            app:stl_defaultTabTextHorizontalPadding="@dimen/dp18"
+            app:stl_indicatorWidth="@dimen/dp30"
+            app:stl_distributeEvenly="true"
+            app:stl_dividerColor="@color/transparent"
+            app:stl_dividerThickness="0dp"
+            app:stl_indicatorColor="@color/white"
+            app:stl_indicatorCornerRadius="@dimen/dp18"
+            app:stl_indicatorGravity="bottom"
+            app:stl_indicatorInterpolation="smart"
+            app:stl_indicatorThickness="@dimen/dp5"
+            app:stl_underlineColor="@color/transparent"
+            app:stl_underlineThickness="0dp" />
+        <!--app:stl_indicatorWidth="90dp"-->
+        <com.xm6leefun.zlldeal.ui_custom.CustomViewPager
+            android:id="@+id/login_viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+        </com.xm6leefun.zlldeal.ui_custom.CustomViewPager>
+        <!--<android.support.v4.view.ViewPager-->
+        <!--android:id="@+id/viewpager"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent" >-->
+        <!--</android.support.v4.view.ViewPager>-->
+    </LinearLayout>
+</LinearLayout>

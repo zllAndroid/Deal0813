@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.xm6leefun.zlldeal">
+    <uses-feature
+        android:name="android.hardware.nfc"
+        android:required="true" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.NFC" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.hardware.camera" />        <!-- 使用照相机权限 -->
+    <uses-feature android:name="android.hardware.camera.autofocus" /><!-- 自动聚焦权限 -->
+    <application
+        android:name="com.xm6leefun.zlldeal.base.MyApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/app_deal512"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <!--android:theme="@style/myTransparent"-->
+        <activity
+            android:name="com.xm6leefun.zlldeal.main_code.about_login.AppStartActivity"
+            android:launchMode="singleTop"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+        <activity
+            android:name="com.xm6leefun.zlldeal.main_code.about_login.LoginActivity"
+            android:launchMode="singleTop"
+            >
+
+        </activity>
+        <!--<activity-->
+            <!--android:name="com.xm6leefun.zlldeal.main_code.about_login.TestListActivity"-->
+            <!--android:launchMode="singleTop"-->
+            <!--&gt;-->
+           <!---->
+
+        <!--</activity>-->
+        <activity
+            android:name="com.xm6leefun.zlldeal.main_code.about_login.AddPwdActivity"
+            android:launchMode="singleTop"
+            >
+        </activity>
+        <!--我的-设置-->
+        <activity android:name="com.xm6leefun.zlldeal.main_code.about_mine.MineSetActivity"
+            android:launchMode="singleTop"
+            android:theme="@style/SwipeBack.Transparent.Theme"
+            >
+        </activity>
+        <activity android:name="com.xm6leefun.zlldeal.main_code.about_mine.MineAdvicesActivity"
+            android:launchMode="singleTop"
+            android:theme="@style/SwipeBack.Transparent.Theme"
+            >
+        </activity>
+
+
+
+        <activity
+            android:name="com.xm6leefun.zlldeal.main_code.about_nfc.NFCKeyActivity"
+            android:launchMode="singleTop"
+            >
+            <!--<intent-filter>-->
+            <!--<action android:name="android.intent.action.MAIN" />-->
+
+            <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--</intent-filter>-->
+            <intent-filter>
+                <action android:name="android.nfc.action.TECH_DISCOVERED" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.nfc.action.TECH_DISCOVERED"
+                android:resource="@xml/zllnfc" />
+        </activity>
+        <activity
+            android:name="com.xm6leefun.zlldeal.main_code.about_nfc.NFCMLActivity"
+            android:launchMode="singleTop"
+            >
+            <!--<intent-filter>-->
+            <!--<action android:name="android.intent.action.MAIN" />-->
+
+            <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--</intent-filter>-->
+            <intent-filter>
+                <action android:name="android.nfc.action.TECH_DISCOVERED" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.nfc.action.TECH_DISCOVERED"
+                android:resource="@xml/zllnfc" />
+        </activity>
+        <activity
+            android:name="com.xm6leefun.zlldeal.main_code.about_login.ForgetPswActivity"
+            android:launchMode="singleTop"
+            android:theme="@style/SwipeBack.Transparent.Theme"
+            >
+        </activity>
+        <activity
+            android:name="com.xm6leefun.zlldeal.main_code.about_login.LoginDealActivity"
+            android:launchMode="singleTop"
+            android:theme="@style/SwipeBack.Transparent.Theme"
+            >
+        </activity>
+        <activity
+            android:name="com.xm6leefun.zlldeal.main_code.mains.MainActivity"
+            android:launchMode="singleTop"
+            >
+
+        </activity>
+
+        <activity android:name="com.xm6leefun.zlldeal.main_code.home_order.HistoryOrderActivity"
+            android:launchMode="singleTop"
+            android:theme="@style/SwipeBack.Transparent.Theme"
+
+            >
+        </activity>
+        <activity android:name="com.xm6leefun.zlldeal.main_code.home_order.HistoryOrderMainActivity"
+            android:launchMode="singleTop"
+            android:theme="@style/SwipeBack.Transparent.Theme"
+            >
+        </activity>
+
+        <activity android:name="com.xm6leefun.zlldeal.main_code.home_order.HistoryDetailsActivity"
+            android:launchMode="singleTop"
+            android:theme="@style/SwipeBack.Transparent.Theme"
+            >
+        </activity>
+        <activity android:name="com.xm6leefun.zlldeal.main_code.home_order.HomeDetailsActivity"
+            android:launchMode="singleTop"
+            android:theme="@style/SwipeBack.Transparent.Theme"
+            >
+        </activity>
+        <activity android:name="com.xm6leefun.zlldeal.main_code.home_order.HomeNFCActivity"
+            android:launchMode="singleTop"
+            android:theme="@style/SwipeBack.Transparent.Theme"
+            >
+        </activity>
+        <activity android:name="com.xm6leefun.zlldeal.main_code.home_order.ScanCodeActivity"
+            android:launchMode="singleTop"
+            android:theme="@style/SwipeBack.Transparent.Theme"
+            >
+        </activity>
+
+
+        <activity android:name="com.xm6leefun.zlldeal.main_code.about_home_activity.HomePurseActivity"
+            android:launchMode="singleTop"
+            android:theme="@style/SwipeBack.Transparent.Theme"
+            >
+
+        </activity>
+        <!--K线图-->
+        <activity android:name="com.xm6leefun.zlldeal.main_code.about_kchar.KkkActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="sensor"
+            >
+
+        </activity>
+        <!--H5页面-->
+        <activity android:name="com.xm6leefun.zlldeal.main_code.popular_activity.GoH5Activity"
+            android:launchMode="singleTop"
+            android:theme="@style/SwipeBack.Transparent.Theme"
+            >
+
+        </activity>
+
+        <activity android:name="com.xm6leefun.zlldeal.main_code.about_home_activity.CompanyActivity"
+            android:launchMode="singleTop"
+            android:theme="@style/SwipeBack.Transparent.Theme"
+            >
+        </activity>
+
+        <activity android:name="com.xm6leefun.zlldeal.main_code.about_home_activity.DownRateActivity"
+            android:launchMode="singleTop"
+            android:theme="@style/SwipeBack.Transparent.Theme"
+            >
+        </activity>
+        <activity android:name="com.xm6leefun.zlldeal.main_code.about_home_activity.MyRateActivity"
+            android:launchMode="singleTop"
+            android:theme="@style/SwipeBack.Transparent.Theme"
+            >
+        </activity>
+
+
+        <activity android:name="com.xm6leefun.zlldeal.main_code.about_mine.mine_set.ChangePhoneActivity"
+            android:launchMode="singleTop"
+            android:theme="@style/SwipeBack.Transparent.Theme"
+            >
+        </activity>
+        <!--我的全部activity-->
+
+        <activity android:name="com.xm6leefun.zlldeal.main_code.about_mine.Mine_CreditCardActivity"
+            android:launchMode="singleTop"
+            android:theme="@style/SwipeBack.Transparent.Theme"
+            >
+        </activity>
+        <activity android:name="com.xm6leefun.zlldeal.main_code.about_mine.MineAboutWeActivity"
+            android:launchMode="singleTop"
+            android:theme="@style/SwipeBack.Transparent.Theme"
+            >
+        </activity>
+
+        <activity android:name="com.xm6leefun.zlldeal.main_code.about_mine.MIneBankCardActivity"
+            android:launchMode="singleTop"
+            android:theme="@style/SwipeBack.Transparent.Theme"
+            >
+        </activity>
+        <activity android:name="com.xm6leefun.zlldeal.main_code.about_mine.MineBusinessActivity"
+            android:launchMode="singleTop"
+            android:theme="@style/SwipeBack.Transparent.Theme"
+            >
+        </activity>
+        <activity android:name="com.xm6leefun.zlldeal.main_code.about_mine.MineNewsActivity"
+            android:launchMode="singleTop"
+            android:theme="@style/SwipeBack.Transparent.Theme"
+            >
+        </activity>
+
+    </application>
+
+</manifest>
