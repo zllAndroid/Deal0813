@@ -33,7 +33,8 @@ import butterknife.Unbinder;
 import rx.schedulers.Schedulers;
 
 /**
- * A simple {@link Fragment} subclass.
+ * by zll
+ *
  */
 public class HomeFragment extends BaseFragment {
 

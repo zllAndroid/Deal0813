@@ -18,7 +18,7 @@ import com.xm6leefun.zlldeal.utils.VersionCheckUtils;
 import com.xm6leefun.zlldeal.utils.VersionCheckUtilsPHP;
 
 import butterknife.BindView;
-
+//我修改了main的参数
 public class MainActivity extends MyBaseActivity {
 //    int[] imgs = {R.drawable.tab_home, R.drawable.tab_mine};
     int[] imgs = {R.drawable.tab_home, R.drawable.tab_tui,R.drawable.tab_order, R.drawable.tab_mine};
@@ -60,6 +60,7 @@ public class MainActivity extends MyBaseActivity {
         return R.layout.activity_main;
     }
 
+
     private View getIndecator(int index) {
         View view = getLayoutInflater().inflate(R.layout.layout_tabin, null);
         ImageView mImageView = (ImageView)view.findViewById(R.id.img_main_tab);
@@ -73,6 +74,7 @@ public class MainActivity extends MyBaseActivity {
         }
         return view;
     }
+
     boolean isExit;
     Handler mHandler = new Handler();
     public boolean onKeyDown(int keyCode, KeyEvent event)
